@@ -42,6 +42,7 @@ install(
 install(
   DIRECTORY "include/"
   DESTINATION include/${PROJECT_NAME}
+  FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp" # To fix why .hpp files are not copied when package is built
 )
 
 ament_python_install_package(${PROJECT_NAME}
